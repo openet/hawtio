@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+	<deployment>
+		<dependencies>
+			<!-- Need dependency on top level OAM EAR, as well as common-ejb3 jar below -->
+			<module name="deployment.oam-ear-0.1.ear" export="true" />
+		</dependencies>
+	</deployment>
+	<sub-deployment name="hawtio-openet-sar-1.0.0.sar">
+		<dependencies>
+			<module name="deployment.oam-ear-0.1.ear.common-ejb3-0.1.jar" />
+		</dependencies>
+	</sub-deployment>
+</jboss-deployment-structure>

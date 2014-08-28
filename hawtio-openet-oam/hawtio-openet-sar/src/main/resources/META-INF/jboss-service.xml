@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+	<mbean name="HAWTIO:service=InitialisatonService" code="com.openet.ext.hawtio.registration.AppRegistration">
+		<depends optional-attribute-name="AppRegistryService">FWOAM:service=AppRegistryService</depends>
+	</mbean>
+</server>

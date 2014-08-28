@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.openet.oam</groupId>
+		<artifactId>hawtio-openet-oam</artifactId>
+		<relativePath>..</relativePath>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>com.openet.oam</groupId>
+	<artifactId>hawtio-openet-ear</artifactId>
+	<packaging>ear</packaging>
+	<version>1.0.0</version>
+
+
+	<name>EAR for packaging Hawtio</name>
+
+<!-- 	<properties> -->
+<!-- 		<target.dir>${env.BROOT}/_build</target.dir> -->
+<!-- 	</properties> -->
+
+<!-- 	<profiles> -->
+ 		<!-- Dev profile to dump output to target directory --> 
+<!-- 		<profile> -->
+<!-- 			<id>development</id> -->
+<!-- 			<properties> -->
+<!-- 				<target.dir>target</target.dir> -->
+<!-- 			</properties> -->
+<!-- 		</profile> -->
+
+<!-- 	</profiles> -->
+
+	<build>
+<!-- 		<outputDirectory>${target.dir}</outputDirectory> -->
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<earSourceDirectory>src/main/resources</earSourceDirectory>
+					<generateApplicationXml>true</generateApplicationXml>
+					<defaultLibBundleDir>/lib</defaultLibBundleDir>
+					<initializeInOrder>true</initializeInOrder>
+					<version>6</version>
+					<modules>
+						<webModule>
+							<groupId>io.hawt</groupId>
+							<artifactId>hawtio-default</artifactId>
+							<contextRoot>/hawtio</contextRoot>
+							<bundleFileName>hawtio.war</bundleFileName>
+						</webModule>
+						<sarModule>
+							<artifactId>hawtio-openet-sar</artifactId>
+							<groupId>com.openet.oam</groupId>
+						</sarModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.hawt</groupId>
+			<artifactId>hawtio-default</artifactId>
+			<version>${hawtio.version}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+ 			<artifactId>hawtio-openet-sar</artifactId>
+			<groupId>com.openet.oam</groupId>
+			<version>1.0.0</version>
+			<type>sar</type>
+		</dependency>
+	</dependencies>
+
+</project>
