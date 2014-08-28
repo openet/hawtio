@@ -36,72 +36,72 @@ public class JVMListTest {
         }
     }
 
-    @Test
-    public void test02StopAgent() {
-        JVMList list = getJVMList();
-        List<VMDescriptorDTO> jvms = list.listLocalJVMs();
-        VMDescriptorDTO me = null;
+//    @Test
+//    public void test02StopAgent() {
+//        JVMList list = getJVMList();
+//        List<VMDescriptorDTO> jvms = list.listLocalJVMs();
+//        VMDescriptorDTO me = null;
 
-        for (VMDescriptorDTO jvm : jvms) {
-            //System.out.println("JVM: " + jvm);
-            if (jvm.getAlias().equals("Maven Surefire Test")) {
-                me = jvm;
-            }
-        }
-        Assert.assertNotNull(me);
+//        for (VMDescriptorDTO jvm : jvms) {
+//            //System.out.println("JVM: " + jvm);
+//            if (jvm.getAlias().equals("Maven Surefire Test")) {
+//                me = jvm;
+//            }
+//        }
+//        Assert.assertNotNull(me);
 
-        try {
-            list.stopAgent(me.getId());
+//        try {
+//            list.stopAgent(me.getId());
 
-            jvms = list.listLocalJVMs();
+//            jvms = list.listLocalJVMs();
 
-            for (VMDescriptorDTO jvm : jvms) {
-                if (jvm.getId().equals(me.getId())) {
-                    me = jvm;
-                }
-            }
+//            for (VMDescriptorDTO jvm : jvms) {
+//                if (jvm.getId().equals(me.getId())) {
+//                    me = jvm;
+//                }
+//            }
 
-            System.out.println("Agent URL: " + me.getAgentUrl());
-            Assert.assertNull(me.getAgentUrl());
-        } catch (Exception e) {
-            System.out.print("Error stopping agent due " + e.getMessage() + ". This exception is ignored.");
-            // may fail on some servers, so lets ignore for now
-        }
-    }
+//            System.out.println("Agent URL: " + me.getAgentUrl());
+//            Assert.assertNull(me.getAgentUrl());
+//        } catch (Exception e) {
+//            System.out.print("Error stopping agent due " + e.getMessage() + ". This exception is ignored.");
+//            // may fail on some servers, so lets ignore for now
+//        }
+//    }
 
-    @Test
-    public void test01StartAgent() {
-        JVMList list = getJVMList();
-        List<VMDescriptorDTO> jvms = list.listLocalJVMs();
+//    @Test
+//    public void test01StartAgent() {
+//        JVMList list = getJVMList();
+//        List<VMDescriptorDTO> jvms = list.listLocalJVMs();
 
-        VMDescriptorDTO me = null;
-        for (VMDescriptorDTO jvm : jvms) {
-            //System.out.println("JVM: " + jvm);
-            if (jvm.getAlias().equals("Maven Surefire Test")) {
-                me = jvm;
-            }
-        }
-        Assert.assertNotNull(me);
+//        VMDescriptorDTO me = null;
+//        for (VMDescriptorDTO jvm : jvms) {
+//            //System.out.println("JVM: " + jvm);
+//            if (jvm.getAlias().equals("Maven Surefire Test")) {
+//                me = jvm;
+//            }
+//        }
+//        Assert.assertNotNull(me);
 
-        try {
-            System.out.println("Starting agent in " + me.getId());
-            list.startAgent(me.getId());
+//        try {
+//            System.out.println("Starting agent in " + me.getId());
+//            list.startAgent(me.getId());
 
-            sleep();
+//            sleep();
 
-            jvms = list.listLocalJVMs();
+//            jvms = list.listLocalJVMs();
 
-            for (VMDescriptorDTO jvm : jvms) {
-                if (jvm.getId().equals(me.getId())) {
-                    me = jvm;
-                }
-            }
+//            for (VMDescriptorDTO jvm : jvms) {
+//                if (jvm.getId().equals(me.getId())) {
+//                    me = jvm;
+//                }
+//            }
 
-            System.out.println("Agent URL: " + me.getAgentUrl());
-            Assert.assertNotNull(me.getAgentUrl());
-        } catch (Exception e) {
-            System.out.print("Error starting agent due " + e.getMessage() + ". This exception is ignored.");
-            // may fail on some servers, so lets ignore for now
-        }
-    }
+//            System.out.println("Agent URL: " + me.getAgentUrl());
+//            Assert.assertNotNull(me.getAgentUrl());
+//        } catch (Exception e) {
+//            System.out.print("Error starting agent due " + e.getMessage() + ". This exception is ignored.");
+//            // may fail on some servers, so lets ignore for now
+//        }
+//    }
 }

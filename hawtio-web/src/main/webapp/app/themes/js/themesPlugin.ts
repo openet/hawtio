@@ -29,7 +29,7 @@ module Themes {
       label: 'hawtio',
       setFunc: (branding) => {
         branding.appName = 'hawtio';
-        branding.appLogo = 'img/hawtio_logo.svg';
+        branding.appLogo = 'img/openet_logo.png';
         branding.css = 'css/site-branding.css';
         branding.logoOnly = true;
         branding.fullscreenLogin = false;

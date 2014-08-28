@@ -206,10 +206,10 @@ div.log-stack-trace p:nth-child(odd) {
                     <div ng-show="recentConnections.length">
                       <p>Recent Connections</p>
                       <ul class="unstyled">
-                        <li>
+<!--                         <li>
                           <a href=""
                              ng-click="goHome()">Console</a>
-                       </li>
+                       </li> -->
                         <li ng-repeat="connection in recentConnections track by $index">
                           <a href=""
                              ng-click="openConnection(connection)">{{connection.name}}</a>

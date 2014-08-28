@@ -19,7 +19,8 @@ module Core {
     });
 
     $scope.openConnection = (connection) => {
-      window.open(connection.url);
+//      window.open(connection.url);
+      window.location.href=connection.url;
     };
 
     $scope.goHome = () => {

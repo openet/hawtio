@@ -1224,7 +1224,7 @@ module Core {
     if (full) {
       log.info("Full URL is: " + full);
       Core.addRecentConnection(localStorage, options.name, full);
-      window.open(full);
+      window.location.href=full;
     }
 
   }
