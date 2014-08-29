@@ -11,7 +11,7 @@ public class AppRegistration implements AppRegistrationMBean {
 	public void start() throws Exception {
 		System.out.println("Startig HAWTIO AppRegistration");
 		
-		appRegistry.registerApplication(APP_ID, "HAWTIO", "Camel monitoring tool", "/hawtio", "/hawtio/img/Apache-camel-logo.png", null);
+		appRegistry.registerApplication(APP_ID, "Interaction Gateway", "The web console for monitoring orchestration flows", "/hawtio", "/hawtio/img/ig-logo.png", null);
 
 	}
 
