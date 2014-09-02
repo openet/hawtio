@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>
+    <ejb-ref>
+        <ejb-ref-name>AppRegistry</ejb-ref-name>
+        <jndi-name>java:global/OAM/common-ejb/AppRegistrySingleton</jndi-name>
+    </ejb-ref>
+</jboss-web>

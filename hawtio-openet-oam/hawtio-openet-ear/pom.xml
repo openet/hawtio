@@ -50,13 +50,13 @@
 						<webModule>
 							<groupId>io.hawt</groupId>
 							<artifactId>hawtio-default</artifactId>
-							<contextRoot>/hawtio</contextRoot>
+ 							<contextRoot>/hawtio</contextRoot>
 							<bundleFileName>hawtio.war</bundleFileName>
 						</webModule>
-						<sarModule>
+						<webModule>
 							<artifactId>hawtio-openet-sar</artifactId>
-							<groupId>com.openet.oam</groupId>
-						</sarModule>
+							<groupId>com.openet.oam</groupId>														
+						</webModule>
 					</modules>
 				</configuration>
 			</plugin>
@@ -74,7 +74,7 @@
  			<artifactId>hawtio-openet-sar</artifactId>
 			<groupId>com.openet.oam</groupId>
 			<version>1.0.0</version>
-			<type>sar</type>
+			<type>war</type>
 		</dependency>
 	</dependencies>
 
