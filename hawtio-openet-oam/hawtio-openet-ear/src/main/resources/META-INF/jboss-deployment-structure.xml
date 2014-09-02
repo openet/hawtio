@@ -6,7 +6,7 @@
 <!-- 			<module name="deployment.oam-ear-0.1.ear" export="true" /> -->
 <!-- 		</dependencies> -->
 	</deployment>
-	<sub-deployment name="hawtio-openet-sar-1.0.0.sar">
+	<sub-deployment name="hawtio-openet-sar-1.0.0.war">
 		<dependencies>
 			<module name="deployment.oam-ear-0.1.ear.common-ejb3-0.1.jar" />
 		</dependencies>
