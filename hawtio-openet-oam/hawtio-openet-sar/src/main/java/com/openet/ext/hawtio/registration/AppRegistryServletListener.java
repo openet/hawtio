@@ -88,8 +88,6 @@ public class AppRegistryServletListener implements ServletContextListener {
 	
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
-		//mytodo remove
-		System.out.println("--------------------- ServletContextListener started -------------------------");	
 		ApplicationDetails appDetails = getApplicationDetails(sce);		
 		
 		try {
@@ -160,11 +158,7 @@ public class AppRegistryServletListener implements ServletContextListener {
 		String key = sce.getServletContext().getInitParameter("APP_REG_KEY");
 		String name = getNonNullInitParam(sce, "APP_REG_NAME");
 		String description = getNonNullInitParam(sce, "APP_REG_DESC");
-//		String context = sce.getServletContext().getContextPath();
-		String context = "hawtio";
-//		String context = getNonNullInitParam(sce, "APP_CTXT_PATH");
-		//mytodo remove
-		System.out.println("------------------------- context:" + context);
+		String context = getNonNullInitParam(sce, "APP_CTXT_PATH");
 		String iconUrl = getNonNullInitParam(sce, "APP_REG_ICON");
 		String securityObjectName = getNonNullInitParam(sce, "APP_REG_SEC_OBJ");
 		
