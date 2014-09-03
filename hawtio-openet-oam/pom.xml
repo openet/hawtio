@@ -13,7 +13,7 @@
 	</properties>
 
 	<modules>
-		<module>hawtio-openet-sar</module>
+		<module>hawtio-openet-war</module>
 		<module>hawtio-openet-ear</module>
 	</modules>
 </project>
