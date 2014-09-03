@@ -2,38 +2,29 @@
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-
 	<display-name>Interaction Gateway</display-name>
-
-<!--  	<context-param>  -->
-<!-- 		<param-name>APP_CTXT_PATH</param-name> -->
-<!-- 		<param-value>/hawtio</param-value> -->
-<!-- 	</context-param> -->
-
 	<context-param>
-		<param-name>APP_REG_KEY</param-name>
-		<param-value>hawtio</param-value>
+		<param-name>APP_CTXT_PATH</param-name>
+		<param-value>/hawtio</param-value>
 	</context-param>
-
-	<context-param>
-		<param-name>APP_REG_NAME</param-name>
-		<param-value>Interaction Gateway</param-value>
-	</context-param>
-
 	<context-param>
 		<param-name>APP_REG_DESC</param-name>
 		<param-value>The web console for monitoring orchestration flows</param-value>
 	</context-param>
-
 	<context-param>
 		<param-name>APP_REG_ICON</param-name>
 		<param-value>/hawtio/img/ig-logo.png</param-value>
 	</context-param>
-
+	<context-param>
+		<param-name>APP_REG_KEY</param-name>
+		<param-value>hawtio</param-value>
+	</context-param>
+	<context-param>
+		<param-name>APP_REG_NAME</param-name>
+		<param-value>Interaction Gateway</param-value>
+	</context-param>
 <!-- 	<context-param> -->
 <!-- 		<param-name>APP_REG_SEC_OBJ</param-name> -->
 <!-- 		<param-value>Fancy New Openet GUI</param-value> -->
 <!-- 	</context-param> -->
-
-
 </web-app>
