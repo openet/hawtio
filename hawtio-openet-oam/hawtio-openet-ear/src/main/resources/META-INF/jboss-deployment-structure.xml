@@ -7,4 +7,9 @@
 			<module name="deployment.oam-ear-0.1.ear.common-ejb3-0.1.jar" />
 		</dependencies>
 	</sub-deployment>
+	<sub-deployment name="hawtio.war">
+		<dependencies>
+			<module name="deployment.oam-ear-0.1.ear.common-ejb3-0.1.jar" />
+		</dependencies>
+	</sub-deployment>
 </jboss-deployment-structure>
