@@ -248,23 +248,24 @@
     <module>hawtio-web</module>
     <module>hawtio-base</module>
     <module>hawtio-default</module>
-    <module>hawtio-default-offline</module>
-    <module>hawtio-no-slf4j</module>
+    <module>hawtio-openet-oam</module>
+<!--     <module>hawtio-default-offline</module> -->
+<!--     <module>hawtio-no-slf4j</module> -->
     <module>hawtio-embedded</module>
     <module>hawtio-app</module>
-    <module>hawtio-osgi-jmx</module>
-    <module>hawtio-osgi-devmode</module>
-    <module>hawtio-plugin-examples</module>
-    <module>sample</module>
-    <module>hawtio-springboot</module>
-    <module>hawtio-sample-springboot</module>
-    <module>hawtio-karaf-terminal</module>
-    <module>hawtio-karaf-git</module>
-    <module>hawtio-directives</module>
-    <module>hawtio-redhat-fuse-branding</module>
-    <module>hawtio-redhat-amq-branding</module>
-    <module>hawtio-fabric8-branding</module>
-    <module>hawtio-karaf</module>
+<!--     <module>hawtio-osgi-jmx</module> -->
+<!--     <module>hawtio-osgi-devmode</module> -->
+<!--     <module>hawtio-plugin-examples</module> -->
+<!--     <module>sample</module> -->
+<!--    <module>hawtio-springboot</module> -->
+<!--    <module>hawtio-sample-springboot</module> -->
+<!--     <module>hawtio-karaf-terminal</module> -->
+<!--     <module>hawtio-karaf-git</module> -->
+<!--     <module>hawtio-directives</module> -->
+<!--     <module>hawtio-redhat-fuse-branding</module> -->
+<!--     <module>hawtio-redhat-amq-branding</module> -->
+<!--     <module>hawtio-fabric8-branding</module> -->
+<!--     <module>hawtio-karaf</module> -->
   </modules>
 
   <build>
