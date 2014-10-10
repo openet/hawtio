@@ -4,13 +4,13 @@
 	<parent>
 		<groupId>com.openet.oam</groupId>
 		<artifactId>hawtio-openet-oam</artifactId>
-		<version>1.0.0</version>
+		<version>2.0.0</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>hawtio-openet-war</artifactId>
 	<groupId>com.openet.oam</groupId>
-	<version>1.0.0</version>
+	<version>2.0.0</version>
 	<packaging>war</packaging>
 	<properties>
 		<module.path>core/OAM/sample/mbean-dependency-example/${project.artifactId}</module.path>

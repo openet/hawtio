@@ -251,6 +251,7 @@
     <module>hawtio-api-docs</module>
     <module>hawtio-base</module>
     <module>hawtio-default</module>
+    <module>hawtio-openet-oam</module>
     <module>hawtio-default-offline</module>
     <module>hawtio-no-slf4j</module>
     <module>hawtio-embedded</module>
