@@ -99,6 +99,29 @@
     <url-pattern>/javadoc/*</url-pattern>
   </filter-mapping>
 
+	<!-- Openet filters -->
+	<filter>
+		<filter-name>SessionAlive</filter-name>
+		<filter-class>com.openet.filters.SessionAliveFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>SessionAlive</filter-name>
+		<!-- this is so the user is properly redirected when the session times out -->
+		<url-pattern>*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>SessionLogout</filter-name>
+		<filter-class>com.openet.filters.LogoutFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>SessionLogout</filter-name>
+		<url-pattern>/logout.jsp</url-pattern>
+	</filter-mapping>
+	<!-- /Openet filters -->
+
   <servlet>
     <servlet-name>jolokia-agent</servlet-name>
     <servlet-class>org.jolokia.http.AgentServlet</servlet-class>
@@ -217,6 +240,12 @@
   <listener>
     <listener-class>io.hawt.blueprint.HawtioBlueprintContextListener</listener-class>
   </listener>
+	<!-- Openet listeners -->
+	<listener>
+		<listener-class>com.openet.session.listeners.AppRegistrationHttpSessionListener</listener-class>
+	</listener>
+	<!-- /Openet listeners -->
+
 
   <context-param>
     <param-name>blueprintProperties</param-name>

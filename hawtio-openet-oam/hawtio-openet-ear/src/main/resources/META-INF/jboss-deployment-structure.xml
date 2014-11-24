@@ -2,7 +2,7 @@
 <jboss-deployment-structure>
 	<deployment>
 	</deployment>
-	<sub-deployment name="hawtio-openet-war-1.0.0.war">
+	<sub-deployment name="hawtio-openet-war-1.4.26.war">
 		<dependencies>
 			<module name="deployment.oam-ear-0.1.ear.common-ejb3-0.1.jar" />
 		</dependencies>
